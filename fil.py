@@ -18,6 +18,7 @@ def apply_color_filter(image, filter_type):
         filtered_image[:, :, 2] = cv2.add(filtered_image[:, :, 2], 50)
     elif filter_type == "decrease_blue":
         filtered_image[:, :, 0] = cv2.subtract(filtered_image[:, :, 0], 50)
+    return filtered_image
 
 image_path = "r.png"
 image = cv2.imread(image_path)
