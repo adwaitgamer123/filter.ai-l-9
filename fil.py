@@ -14,9 +14,9 @@ def apply_color_filter(image, filter_type):
     elif filter_type == "green_tint":
         filtered_image[:, :, 0] = 0
         filtered_image[:, :, 2] = 0 
-    elif filtered_image == "increase_red":
-        filtered_image[:, :, 2] = cv2.add(filtered_image[:, :, 0], 50)
-    elif filtered_image == "decrease_blue":
+    elif filter_type == "increase_red":
+        filtered_image[:, :, 2] = cv2.add(filtered_image[:, :, 2], 50)
+    elif filter_type == "decrease_blue":
         filtered_image[:, :, 0] = cv2.subtract(filtered_image[:, :, 0], 50)
 
 image_path = "r.png"
